@@ -1,0 +1,62 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>PRESENTATION</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>DESCRIPTION</td>
+                            <td>IMAGE</td>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% presentations.forEach(function(presentation) { %>
+                            <tr>
+                                <td><%= presentation.Description %></td>
+
+                                <td><img src="<%= presentation.Image %>" alt="Image" width="100"></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Historique</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        sendDataViaAjax('addPresentationForm', '/Postpresentation', function(error, response) {
+        
+                            });
+                        });
+                    </script>
+                    <form method="post" enctype="multipart/form-data" action="/Postpresentation" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="Description" name="Description" placeholder="Description" required>
+                            <span>Description</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="file" id="Image" name="Image" placeholder="Image URL" required>
+                            <span>Image</span>
+                            <i></i>
+                        </div>
+                       
+                        <input type="submit" onclick="clickRubrique('/Presentation');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

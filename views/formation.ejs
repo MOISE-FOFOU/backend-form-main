@@ -1,0 +1,82 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>FORMATIONS</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>TITRE</td>
+                            <td>PRESENTATION</td>
+                            <td>ADMISSION</td>
+                            <td>PARCOURS</td>
+                            <td>PARCOURS IMAGE</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% formations.forEach(function(formation) { %>
+                            <tr>
+                                <td><%= formation.titre %></td>
+                                <td><%= formation.presentation %></td>
+                                <td><%= formation.admission %></td>
+                                <td><%= formation.parcours %></td>
+
+                                <td><img src="<%= formation.Image %>" alt="Image" width="100"></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Teacher</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        sendDataViaAjax('addPresentationForm', '/Postformation', function(error, response) {
+        
+                            });
+                        });
+                    </script>
+                    <form method="post" action="/Postformation"  enctype="multipart/form-data" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="titre" name="titre" placeholder="titre" required>
+                            <span>titre</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="presentation" name="presentation" placeholder="presentation" required>
+                            <span>presentation</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="admission" name="admission" placeholder="admission" required>
+                            <span>admission</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="parcours" name="parcours" placeholder="parcours" required>
+                            <span>parcours</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="file" id="Image" name="Image" placeholder="parcoursImage" required>
+                            <span>parcoursImage</span>
+                            <i></i>
+                        </div>
+                        <input type="submit" onclick="clickRubrique('/Formation');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

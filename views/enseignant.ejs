@@ -1,0 +1,91 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>ENSEIGNANTS</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>NOM</td>
+                            <td>MAIL</td>
+                            <td>TELEPHONE </td>
+                            <td>DOMAINE EXPERTISE</td>
+                            <td>GRADE </td>
+                            <td>RESPONSABILITE</td>
+                            <td>PHOTO</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% enseignants.forEach(function(enseignant) { %>
+                            <tr>
+                                <td><%= enseignant.nomComplet %></td>
+                                <td><%= enseignant.adresseMail %></td>
+                                <td><%= enseignant.telephone %></td>
+                                <td><%= enseignant.domainesExpertise %></td>
+                                <td><%= enseignant.grade %></td>
+                                <td><%= enseignant.responsabilite %></td>
+
+                                <td><img src="<%= enseignant.Image %>" alt="Image" width="100"></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Enseignant</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+                    
+                    <form method="post" action="/Postenseignant" enctype="multipart/form-data" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="nomComplet" name="nomComplet" placeholder="nomComplet" required>
+                            <span>nomComplet</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="adresseMail" name="adresseMail" placeholder="adresseMail" required>
+                            <span>adresseMail</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="telephone" name="telephone" placeholder="telephone" required>
+                            <span>telephone</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="domainesExpertise" name="domainesExpertise" placeholder="domainesExpertise" required>
+                            <span>domainesExpertise</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="grade" name="grade" placeholder="grade" required>
+                            <span>grade</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="responsabilite" name="responsabilite" placeholder="responsabilite" required>
+                            <span>responsabilite</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="file" id="Image" name="Image" placeholder="imageProfil" required>
+                            <span>imageProfil</span>
+                            <i></i>
+                        </div>
+                      
+                        <input type="submit" onclick="clickRubrique('/Enseignant');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    

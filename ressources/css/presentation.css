@@ -1,0 +1,70 @@
+main{
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    gap: 2em;
+    padding: 2%;
+}
+
+
+main .list{
+    background-color: white;
+    width: 80%;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+.list table{
+    width: 100%;
+    padding: 0.5%;
+    border-collapse: collapse;
+}
+.list th{
+    border-bottom: 1px solid black;
+}
+.list th, .list td{
+    padding: 0.5em;
+    border-left: 1px solid black;
+}
+.list th:first-child, .list td:first-child{
+    border-left: none;
+}
+.list tr:nth-child(even){
+    background-color: rgba(29, 27, 49, 0.25);
+} 
+
+main .card{
+    background-color: white;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+main form input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    height: 35px;
+    background-color: rgba(29, 27, 49, 0.25);
+    border-radius: 6px;
+    padding: 2%;
+}
+main .card form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+main .card button{
+    color: white;
+    border: none;
+    background-color: #1d1b31;
+    border-radius: 6px;
+    font-size: 15px;
+    padding: 3%;
+    font-weight: bold;
+    cursor: pointer;
+}

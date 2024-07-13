@@ -1,0 +1,54 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>HISTORIQUE</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>DESCRIPTION</td>
+                            <td>IMAGE</td>
+                        </tr>
+                    </thead>
+                    <tbody id="corps-historique">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Historique</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        sendDataViaAjax('addPresentationForm', '/Posthistorique', function(error, response) {
+                            });
+                        });
+                    </script>
+                    <form method="post" action="/Posthistorique" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="Description" name="Description" placeholder="Description" required>
+                            <span>Description</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="Image" name="Image" placeholder="Image URL" required>
+                            <span>Image</span>
+                            <i></i>
+                        </div>
+                       
+                        <input type="submit" onclick="clickRubrique('/Historique');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    

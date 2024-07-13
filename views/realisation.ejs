@@ -1,0 +1,72 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>REALISATION</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+
+                            <td>TITRE</td>
+                            <td>ANNEE</td>
+                            <td>DESCRIPTION</td>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% realisations.forEach(function(realisation) { %>
+                            <tr>
+                                <td><%= realisation.titre %></td>
+                                <td><%= realisation.annee %></td>
+                                <td><%= realisation.Description %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Teacher</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        sendDataViaAjax('addPresentationForm', '/Postrealisation', function(error, response) {
+        
+                            });
+                        });
+                    </script>
+                    
+                    <form method="post" action="/Postrealisation" enctype="multipart/form-data" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="titre" name="titre" placeholder="titre" required>
+                            <span>titre</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="annee" name="annee" placeholder="annee" required>
+                            <span>annee</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="Description" name="Description" placeholder="description" required>
+                            <span>description</span>
+                            <i></i>
+                        </div>
+                       
+                        <input type="submit" onclick="clickRubrique('/Realisation');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

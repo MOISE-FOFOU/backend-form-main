@@ -1,0 +1,62 @@
+PRESENTATION
+    *   nbre de'enseignants
+    *   nbre d'entreprises
+    *   description
+    *   image
+    *   localisation
+    *   telephone
+    *   email
+    *   adresse
+
+RECHERCHE
+
+    *   titre
+    *   image
+    *   description
+    *   document
+
+ACCUEIL
+
+    *   image
+    *   description
+
+ORGANISATION
+
+    *   responsables
+    *   secretariat
+    *   nbr enseignants
+    *   nbr chercheurs
+
+ACCES
+
+    *   description
+    *   coordonnees
+
+ACTUALITES
+    
+    *   image
+    *   titre
+    *   description
+    *   date
+    *   lieu
+    *   lien utile
+
+
+FORMATION
+
+    *   titre
+    *   nbr parcours
+    *   parcours
+    *   description
+    *   duree
+    *   alternance
+    *   image
+
+PERSONNEL
+
+    *   nom
+    *   image
+    *   poste
+    *   grade
+    *   contact
+    

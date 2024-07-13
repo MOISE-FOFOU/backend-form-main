@@ -1,0 +1,68 @@
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>ACTUALITE</h3>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>TITRE</td>
+                            <td>DESCRIPTION</td>
+                            <td>SEMAINE</td>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% actualites.forEach(function(actualite) { %>
+                            <tr>
+                                <td><%= actualite.titre %></td>
+                                <td><%= actualite.Description %></td>
+                                <td><%= actualite.semaine %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <span class="las la-plus-circle"></span>
+                <h3>Add New Teacher</h3>
+            </div>
+            <div class="card-body">
+                <div class="box">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        sendDataViaAjax('addPresentationForm', '/Postactualite', function(error, response) {
+        
+                            });
+                        });
+                    </script>
+                    <form method="post" action="/Postactualite" enctype="multipart/form-data" id="addPresentationForm">
+                        <h2>ADD NEW</h2>
+                        <div class="inputbox">
+                            <input type="text" id="titre" name="titre" placeholder="titre" required>
+                            <span>titre</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="Description" name="Description" placeholder="description" required>
+                            <span>description</span>
+                            <i></i>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" id="semaine" name="semaine" placeholder="semaine" required>
+                            <span>semaine</span>
+                            <i></i>
+                        </div>
+                       
+                        <input type="submit" onclick="clickRubrique('/Actualite');" value="Enregistrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
