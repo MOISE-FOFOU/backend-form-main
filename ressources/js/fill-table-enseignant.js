@@ -1,4 +1,3 @@
-// Fonction principale pour récupérer les données d'enseignant depuis l'API
 function getStaffData() {
     fetch('/Getenseignant', {
         method: 'GET',
